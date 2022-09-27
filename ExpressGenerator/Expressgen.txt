@@ -1,0 +1,93 @@
+1) tool
+express-generator
+
+MVC - Design Pattern
+
+easy create organize and maintain application
+
+
+Model
+View
+Controller
+--------------------------------
+step 1 -  npx express-generator Etutor --view ejs
+note  ejs embedded javascript (html+js)
+
+step2 file ---> open folder ---> Etutor
+
+step 3 open terminal 
+--> npm install
+--> npm start
+--> open web browser and type localhost:3000
+
+--------------------------------------------------------
+
+package.json-------> www -------> apps.js // for routs and redirection 
+
+Mapping 
+Working on Framework
+
+views ---> html
+
+routes ---> directions
+
+to create login
+
+1)
+
+to create login ----
+1)----------inside app.js 
+
+
+var loginRouter=  require('./routes/loginroute')
+var adminRouter = require('./routes/adminjsfile')
+
+app.use('/login',loginRouter);
+app.use('/admin',adminRouter);
+
+------------inside routes folder create two files
+
+1) ------------loginroute.js ---------
+var express = require('express');
+const app = require('../app');
+var router = express.Router();
+
+
+router.get('/', function(req, res, next) {
+ res.send("this is login page ")
+});
+
+module.exports = router;
+
+
+
+2) ---adminjsfile.js---------
+var express = require('express');
+const app = require('../app');
+var router = express.Router();
+
+
+router.get('/', function(req, res, next) {
+ res.send("this is admin page ")
+});
+
+module.exports = router;
+
+----------------------------------------------------------------
+npm i nodemon --g
+
+
+ "scripts": 
+{   
+     "start": "node ./bin/www", 
+        "devStart":"nodemon ./bin/www"  
+ },
+
+
+npm run devStart
+----------------------------------------------------------------
+
+package.json --wwww ----app-----adminjsfile --- 
+
+/
+/addstudent--->addstudentformpage.ejs

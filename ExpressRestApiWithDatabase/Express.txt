@@ -1,0 +1,55 @@
+1. created folder expressrestapiwithdatabase
+2. created file server.js
+3. on terminal ---> npm i express mysql body-parser
+4.// to excute this program 
+// npx nodemon server.js
+
+
+npx nodemon server.js
+===========// form or request is for post ============
+
+> npm i body-parser
+
+-----on server side------
+var bodyParser=require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:true}))
+
+
+app.post("/admin",(req,res)=>{
+     
+    res.send(" this is a post method" +req.body.id +req.body.name )
+})
+
+
+API
+webservices
+xml used to be used --
+===============JSON================
+
+java script object notation
+
+[
+{
+"id":1234
+"name":"mysql"
+"code":"12454ssds"
+}
+
+{
+"id":3245
+"name":"abc"
+"code":"12454ssds"
+
+}]
+----------------------------------------------------------------
+
+connection with database
+
+1. npm i mysql
+or 
+npm i mongoose
+
+connect
+
+-------------------------------------------------------------------
